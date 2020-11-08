@@ -8,7 +8,9 @@ $(window).scroll(function(){
 
   $('.back-bird').css({
     'transform' : 'translate(0px, '+ wScroll / 4 +'%)'
-  });
+	});
+	
+
 if(wScroll > $('.project-pics').offset().top - ($(window).height() / 1.2)) {
 
     $('.project-pics img').each(function(i){
@@ -19,3 +21,7 @@ if(wScroll > $('.project-pics').offset().top - ($(window).height() / 1.2)) {
     });
   };
 });
+
+var now = new Date();
+var dtString = now.getDate() + "." + now.getMonth() + "." + now.getFullYear();
+document.getElementById("date").textContent = dtString;
